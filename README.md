@@ -127,10 +127,6 @@ I’d love to hear your thoughts! Feel free to open an issue or submit a pull re
 
 ### Happy coding! 🎉
 
----
 
-### Notes:
 
-1. **Project Demo Link**: Don't forget to replace the demo link with your actual live site or demo link once you deploy it.
-2. **Preview Images**: Replace the placeholder images with actual screenshots of your site or app for a more professional and visually engaging README.
 
