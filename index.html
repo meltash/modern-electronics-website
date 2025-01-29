@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TechHub - Premium Electronics Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.min.css" rel="stylesheet"/>
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+    <style>
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-[Inter] bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+        <nav class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="logo.png" alt="TechHub" class="h-8"/>
+                </div>
+                <!-- Desktop Navigation (hidden on mobile) -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-custom">Home</a>
+                    <a href="#products" class="text-gray-700 hover:text-custom">Products</a>
+                    <a href="#deals" class="text-gray-700 hover:text-custom">Deals</a>
+                    <a href="#support" class="text-gray-700 hover:text-custom">Support</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="!rounded-button bg-custom text-white px-4 py-2">Sign In</button>
+                    <button class="text-gray-700"><i class="fas fa-shopping-cart"></i></button>
+                    <!-- Mobile Menu Button (visible on mobile) -->
+                    <button class="md:hidden text-gray-700 hover:text-custom transition" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Navigation Menu (hidden by default) -->
+            <div class="md:hidden hidden bg-white py-4" id="mobile-menu">
+                <div class="flex flex-col gap-4">
+                    <a href="#home" class="text-gray-700 hover:text-custom">Home</a>
+                    <a href="#products" class="text-gray-700 hover:text-custom">Products</a>
+                    <a href="#deals" class="text-gray-700 hover:text-custom">Deals</a>
+                    <a href="#support" class="text-gray-700 hover:text-custom">Support</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section id="home" class="relative">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <div class="relative h-[600px]">
+                                <img src="nextgen.jpg" alt="Latest Electronics" class="w-full h-full object-cover"/>
+                                <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
+                                    <div class="max-w-8xl mx-auto px-8">
+                                        <h1 class="text-5xl font-bold text-white mb-6">Next-Gen Technology<br/>At Your Fingertips</h1>
+                                        <p class="text-xl text-white mb-8">Experience the future with our latest collection</p>
+                                        <button class="!rounded-button bg-custom text-white px-8 py-3 text-lg">Shop Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Categories Section -->
+        <section id="products" class="py-16 bg-white">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Featured Categories</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                    <a href="#" class="group">
+                        <div class="bg-gray-50 rounded-lg p-6 text-center transition duration-300 hover:shadow-lg">
+                            <i class="fas fa-mobile-alt text-4xl text-custom mb-4"></i>
+                            <h3 class="text-lg font-semibold text-gray-900">Smartphones</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="group">
+                        <div class="bg-gray-50 rounded-lg p-6 text-center transition duration-300 hover:shadow-lg">
+                            <i class="fas fa-laptop text-4xl text-custom mb-4"></i>
+                            <h3 class="text-lg font-semibold text-gray-900">Laptops</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="group">
+                        <div class="bg-gray-50 rounded-lg p-6 text-center transition duration-300 hover:shadow-lg">
+                            <i class="fas fa-gamepad text-4xl text-custom mb-4"></i>
+                            <h3 class="text-lg font-semibold text-gray-900">Gaming</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="group">
+                        <div class="bg-gray-50 rounded-lg p-6 text-center transition duration-300 hover:shadow-lg">
+                            <i class="fas fa-home text-4xl text-custom mb-4"></i>
+                            <h3 class="text-lg font-semibold text-gray-900">Smart Home</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="group">
+                        <div class="bg-gray-50 rounded-lg p-6 text-center transition duration-300 hover:shadow-lg">
+                            <i class="fas fa-headphones text-4xl text-custom mb-4"></i>
+                            <h3 class="text-lg font-semibold text-gray-900">Audio</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deal of the Day Section -->
+        <section id="deals" class="py-16 bg-gray-50">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        <div class="p-8 lg:p-12">
+                            <div class="inline-block bg-custom/10 text-custom px-4 py-2 rounded-full text-sm font-semibold mb-6">Deal of the Day</div>
+                            <h2 class="text-4xl font-bold text-gray-900 mb-4">iPhone 14 Pro Max</h2>
+                            <p class="text-gray-600 mb-6">Get the latest iPhone with incredible camera capabilities and powerful performance.</p>
+                            <div class="flex items-center space-x-4 mb-8">
+                                <span class="text-3xl font-bold text-custom">$999</span>
+                                <span class="text-xl text-gray-500 line-through">$1099</span>
+                                <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">Save $100</span>
+                            </div>
+                            <div class="flex space-x-6 mb-8">
+                                <div>
+                                    <span class="text-2xl font-bold text-gray-900" id="hours">24</span>
+                                    <p class="text-sm text-gray-500">Hours</p>
+                                </div>
+                                <div>
+                                    <span class="text-2xl font-bold text-gray-900" id="minutes">00</span>
+                                    <p class="text-sm text-gray-500">Minutes</p>
+                                </div>
+                                <div>
+                                    <span class="text-2xl font-bold text-gray-900" id="seconds">00</span>
+                                    <p class="text-sm text-gray-500">Seconds</p>
+                                </div>
+                            </div>
+                            <button class="!rounded-button bg-custom text-white px-8 py-3 text-lg">Shop Now</button>
+                        </div>
+                        <div class="relative h-[400px] lg:h-auto">
+                            <img src="iphone 14 promax.jpg" alt="iPhone 14 Pro Max" class="absolute inset-0 w-full h-full object-cover"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals Section -->
+        <section class="py-16 bg-white">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12">New Arrivals</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-50 rounded-lg p-6 group">
+                        <div class="relative mb-6">
+                            <img src="search image.jpg" alt="Wireless Earbuds" class="w-full h-48 object-cover rounded-lg"/>
+                            <button class="!rounded-button absolute bottom-4 right-4 bg-white text-custom p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Premium Wireless Earbuds</h3>
+                        <p class="text-gray-600 mb-4">True wireless freedom with premium sound quality</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-custom">$199</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-gray-600">4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 group">
+                        <div class="relative mb-6">
+                            <img src="modern watch.jpg" alt="Smart Watch" class="w-full h-48 object-cover rounded-lg"/>
+                            <button class="!rounded-button absolute bottom-4 right-4 bg-white text-custom p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Smart Watch Pro</h3>
+                        <p class="text-gray-600 mb-4">Advanced health tracking and notifications</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-custom">$299</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-gray-600">4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 group">
+                        <div class="relative mb-6">
+                            <img src="premiunm laptop.jpg" alt="Laptop" class="w-full h-48 object-cover rounded-lg"/>
+                            <button class="!rounded-button absolute bottom-4 right-4 bg-white text-custom p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Ultra Slim Laptop</h3>
+                        <p class="text-gray-600 mb-4">Powerful performance in a slim design</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-custom">$1299</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-gray-600">4.7</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 group">
+                        <div class="relative mb-6">
+                            <img src="smartspeaker.jpg" alt="Smart Speaker" class="w-full h-48 object-cover rounded-lg"/>
+                            <button class="!rounded-button absolute bottom-4 right-4 bg-white text-custom p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Smart Speaker</h3>
+                        <p class="text-gray-600 mb-4">Premium sound with voice control</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-custom">$149</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-gray-600">4.6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted Brands Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Trusted Brands</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                    <div class="flex items-center justify-center p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+                        <img src="apple-removebg-preview.png" alt="Apple" class="h-12 opacity-75 hover:opacity-100 transition-opacity"/>
+                    </div>
+                    <div class="flex items-center justify-center p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+                        <img src="samsung logo.png" alt="Samsung" class="h-12 opacity-75 hover:opacity-100 transition-opacity"/>
+                    </div>
+                    <div class="flex items-center justify-center p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+                        <img src="sony improved.png" alt="Sony" class="h-12 opacity-75 hover:opacity-100 transition-opacity"/>
+                    </div>
+                    <div class="flex items-center justify-center p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+                        <img src="lg.png" alt="LG" class="h-12 opacity-75 hover:opacity-100 transition-opacity"/>
+                    </div>
+                    <div class="flex items-center justify-center p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+                        <img src="improved dell.png" alt="Dell" class="h-12 opacity-75 hover:opacity-100 transition-opacity"/>
+                    </div>
+                    <div class="flex items-center justify-center p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+                        <img src="hp.png" alt="HP" class="h-12 opacity-75 hover:opacity-100 transition-opacity"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16 bg-white">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="bg-custom/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-truck text-2xl text-custom"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Free Shipping</h3>
+                        <p class="text-gray-600">On orders over $50</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-custom/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-headset text-2xl text-custom"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">24/7 Support</h3>
+                        <p class="text-gray-600">Expert assistance</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-custom/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-lock text-2xl text-custom"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Secure Payment</h3>
+                        <p class="text-gray-600">100% secure checkout</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-custom/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-undo text-2xl text-custom"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Easy Returns</h3>
+                        <p class="text-gray-600">30 day return policy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="py-16 bg-custom">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold text-white mb-4">Stay Updated</h2>
+                    <p class="text-white/80 mb-8">Subscribe to our newsletter for exclusive deals and updates</p>
+                    <form class="flex space-x-4">
+                        <input type="email" placeholder="Enter your email" class="flex-1 !rounded-button px-6 py-3 bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-white"/>
+                        <button type="submit" class="!rounded-button bg-white text-custom px-8 py-3">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <img src="logo.png" alt="TechHub" class="h-8 mb-6"/>
+                    <p class="text-gray-400">Your trusted destination for premium electronics and cutting-edge technology.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Shop</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Smartphones</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Laptops</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Gaming</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Support</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">© 2024 TechHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Glide.js
+        new Glide('.glide', {
+            type: 'carousel',
+            autoplay: 5000,
+            animationDuration: 800,
+            gap: 0,
+            perView: 1
+        }).mount();
+
+        // Timer for Deal of the Day
+        function updateTimer() {
+            const now = new Date();
+            const end = new Date();
+            end.setHours(23, 59, 59);
+            
+            const diff = end - now;
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
